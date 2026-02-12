@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  :root {
+    /* Core palette - soft, calming pastels */
+    --lavender: 270 50% 85%;
+    --lavender-deep: 270 40% 70%;
+    --sky: 200 80% 85%;
+    --sky-deep: 200 70% 70%;
+    --peach: 20 90% 88%;
+    --peach-deep: 20 80% 75%;
+    --mint: 160 50% 82%;
+    --mint-deep: 160 45% 65%;
+    
+    /* Semantic tokens */
+    --background: 270 30% 98%;
+    --foreground: 270 30% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 270 30% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 270 30% 15%;
+
+    --primary: 270 45% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 200 60% 85%;
+    --secondary-foreground: 200 50% 25%;
+
+    --muted: 270 20% 94%;
+    --muted-foreground: 270 15% 45%;
+
+    --accent: 20 80% 85%;
+    --accent-foreground: 20 60% 30%;
+
+    --destructive: 0 65% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 270 20% 90%;
+    --input: 270 20% 90%;
+    --ring: 270 45% 65%;
+
+    --radius: 1rem;
+
+    /* Mood colors */
+    --mood-happy: 45 90% 65%;
+    --mood-sad: 220 50% 60%;
+    --mood-anxious: 35 85% 60%;
+    --mood-calm: 180 45% 65%;
+    --mood-angry: 0 70% 60%;
+    --mood-tired: 270 30% 60%;
+    --mood-excited: 330 70% 65%;
+
+    /* Glassmorphism */
+    --glass-bg: 0 0% 100% / 0.7;
+    --glass-border: 0 0% 100% / 0.5;
+    --glass-shadow: 270 50% 50% / 0.1;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--lavender)) 0%, hsl(var(--sky)) 50%, hsl(var(--peach)) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100% / 0.9) 0%, hsl(0 0% 100% / 0.7) 100%);
+    --gradient-mood: linear-gradient(135deg, hsl(var(--mint)) 0%, hsl(var(--sky)) 100%);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 270 20% 8%;
+    --foreground: 270 10% 95%;
+
+    --card: 270 20% 12%;
+    --card-foreground: 270 10% 95%;
+
+    --popover: 270 20% 12%;
+    --popover-foreground: 270 10% 95%;
+
+    --primary: 270 50% 70%;
+    --primary-foreground: 270 30% 10%;
+
+    --secondary: 200 40% 25%;
+    --secondary-foreground: 200 60% 90%;
+
+    --muted: 270 15% 18%;
+    --muted-foreground: 270 10% 65%;
+
+    --accent: 20 50% 25%;
+    --accent-foreground: 20 80% 90%;
+
+    --destructive: 0 60% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 270 15% 20%;
+    --input: 270 15% 20%;
+    --ring: 270 50% 70%;
+
+    --glass-bg: 270 20% 15% / 0.7;
+    --glass-border: 270 20% 25% / 0.5;
+    --glass-shadow: 270 50% 30% / 0.2;
+
+    --gradient-hero: linear-gradient(135deg, hsl(270 30% 15%) 0%, hsl(200 30% 15%) 50%, hsl(20 30% 15%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(270 20% 15% / 0.9) 0%, hsl(270 20% 12% / 0.7) 100%);
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Fraunces', serif;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply backdrop-blur-xl rounded-2xl border;
+    background: hsl(var(--glass-bg));
+    border-color: hsl(var(--glass-border));
+    box-shadow: 0 8px 32px hsl(var(--glass-shadow));
+  }
+
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  .mood-glow {
+    box-shadow: 0 0 30px hsl(var(--primary) / 0.3);
+  }
+
+  .floating {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .floating-delayed {
+    animation: float 6s ease-in-out infinite;
+    animation-delay: -3s;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--lavender-deep)) 0%, hsl(var(--primary)) 50%, hsl(var(--peach-deep)) 100%);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulse-soft {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
+}
+
+.animate-fade-in-up-delay-1 {
+  animation: fade-in-up 0.6s ease-out 0.1s forwards;
+  opacity: 0;
+}
+
+.animate-fade-in-up-delay-2 {
+  animation: fade-in-up 0.6s ease-out 0.2s forwards;
+  opacity: 0;
+}
+
+.animate-fade-in-up-delay-3 {
+  animation: fade-in-up 0.6s ease-out 0.3s forwards;
+  opacity: 0;
+}
