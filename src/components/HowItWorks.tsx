@@ -36,7 +36,7 @@ const HowItWorks = () => {
             Simple & Effective
           </span>
           <h2 className="font-serif text-3xl md:text-4xl font-semibold text-foreground mb-4">
-            How Moodly Works
+            How Reflectly Works
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             Your journey to emotional wellness, made simple and supportive.

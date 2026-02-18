@@ -22,7 +22,7 @@ const Navbar = () => {
               to="/how-it-works"
               className="text-muted-foreground hover:text-foreground transition-colors font-medium"
             >
-              How It Works
+              About Us
             </Link>
             <Link
               to="/dashboard"
