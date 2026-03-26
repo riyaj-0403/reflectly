@@ -53,18 +53,22 @@ const Journal = () => {
               Write about what's been on your mind today. We'll gently help you
               understand how you might be feeling.
             </p>
+
+             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+              Some days will be messy. Some days will feel peaceful. Reflectly is here for all of them.
+            </p>
           </div>
 
           {!showSuggestions ? (
             <div className="space-y-12">
 
               {/* Factors Affecting You */}
-              <div className="glass-card p-8">
+              {/* <div className="glass-card p-8">
                 <QuickTags
                   selectedTags={selectedTags}
                   onTagToggle={handleTagToggle}
                 />
-              </div>
+              </div> */}
 
               {/* Journal Entry */}
               <div className="glass-card p-8 animate-fade-in-up">
