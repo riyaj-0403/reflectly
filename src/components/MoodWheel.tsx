@@ -9,13 +9,13 @@ type Mood = {
 };
 
 const moods: Mood[] = [
-  { emoji: "😊", label: "Happy", color: "mood-happy", bgClass: "bg-mood-happy" },
-  { emoji: "😢", label: "Sad", color: "mood-sad", bgClass: "bg-mood-sad" },
-  { emoji: "😰", label: "Anxious", color: "mood-anxious", bgClass: "bg-mood-anxious" },
-  { emoji: "😌", label: "Calm", color: "mood-calm", bgClass: "bg-mood-calm" },
-  { emoji: "😤", label: "Angry", color: "mood-angry", bgClass: "bg-mood-angry" },
-  { emoji: "😴", label: "Tired", color: "mood-tired", bgClass: "bg-mood-tired" },
-  { emoji: "🤩", label: "Excited", color: "mood-excited", bgClass: "bg-mood-excited" },
+  { emoji: "😊", label: "Happy",    color: "mood-happy",   bgClass: "bg-mood-happy" },
+  { emoji: "😢", label: "Sad",      color: "mood-sad",     bgClass: "bg-mood-sad" },
+  { emoji: "😰", label: "Anxious",  color: "mood-anxious", bgClass: "bg-mood-anxious" },
+  { emoji: "😤", label: "Angry",    color: "mood-angry",   bgClass: "bg-mood-angry" },
+  { emoji: "😲", label: "Surprise", color: "mood-excited", bgClass: "bg-mood-excited" },
+  { emoji: "🥰", label: "Love",     color: "mood-calm",    bgClass: "bg-mood-calm" },
+  // { emoji: "😌", label: "Calm",     color: "mood-calm",    bgClass: "bg-mood-calm" },
 ];
 
 interface MoodWheelProps {

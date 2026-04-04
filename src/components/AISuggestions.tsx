@@ -38,6 +38,18 @@ const moodSuggestions: Record<string, { task: string; question: string; activity
     question: "What boundary might need to be set here?",
     activity: "Physical movement—try a quick walk or stretch",
   },
+  Surprise: {
+    message: "Something unexpected caught you off guard! 😲",
+    task: "Write about what surprised you and how you feel now",
+    question: "Was this surprise welcome or unwelcome? What does that tell you?",
+    activity: "Take a few deep breaths and let the moment settle",
+  },
+  Love: {
+    message: "Your heart is full right now. That's beautiful. 🥰",
+    task: "Write about who or what you're feeling this love for",
+    question: "How can you express this love or appreciation today?",
+    activity: "Send a kind message to someone you care about",
+  },
   Tired: {
     message: "Rest is productive too. Be gentle with yourself. 😴",
     task: "Identify one thing you can postpone or delegate",
