@@ -137,23 +137,29 @@ cd reflectly
 ---
 
 ## 🎰Backend
+```bash
 cd backend
 npm install
 npm start
+```
 
 ---
 
 ## 🎰ML Service
+```bash
 cd ml-service
 pip install -r requirements.txt
 uvicorn app:app --reload
+```
 
 ---
 
 ## 🎰Frontend
+```bash
 cd frontend
 npm install
 npm start
+```
 
 ---
 
