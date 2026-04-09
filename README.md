@@ -34,7 +34,7 @@ The goal is not to label your feelings, but to help you notice patterns over tim
 ## 🖼️ Application Preview
 
 ### 🏠 Landing Page
-![Landing Page](landing.jpeg)
+![Landing Page](Dashboard.jpeg)
 
 ### ✍️ Journal Entry
 ![Journal Entry](journal.jpeg)
