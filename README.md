@@ -2,7 +2,7 @@
 
 # 🌸 Reflectly
 
-**Emotion-aware journaling, powered by calibrated deep learning.**
+**Emotion-aware journaling, powered by calibrated deep learning**
 
 *Write freely. Understand yourself better.* ✨
 
