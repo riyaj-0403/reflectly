@@ -48,6 +48,23 @@ const resolveUIEmotion = (rawEmotion, confidence, textInput, top3 = []) => {
     return 'Surprise';
   }
 
+  //anger override
+  if (
+    text.includes('i was angry') ||
+    text.includes('i was mad') ||
+    text.includes('i am furious') ||
+    text.includes('i am enraged') ||
+    text.includes('i am so angry') ||
+    text.includes('i am so mad') ||
+    text.includes('i am so furious') ||
+    text.includes('i am so enraged')||
+    text.includes('i had a fight') ||
+    text.includes('i had an argument') ||
+    text.includes('i fought')
+  ) {
+    return 'Angry';
+  }
+
   // ✅ top3 fallback
   if (top3 && top3.length > 1) {
     const second = top3[1];
